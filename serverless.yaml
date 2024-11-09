@@ -1,0 +1,13 @@
+service: AutoSpotAPI
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: 'us-east-1'
+
+functions:
+  api:
+    handler: build/index.handler
+    events:
+      - httpApi: '*'
